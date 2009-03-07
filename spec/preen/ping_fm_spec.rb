@@ -26,7 +26,7 @@ describe Preen::PingFm do
 
     it "should raise an error if a post attempt fails" do
       @pingfm_client.should_receive(:post).
-        and_return(:status => 'FAIL', :message => "Error Message")
+        and_return("status" => 'FAIL', "message" => "Error Message")
       lambda do
         @it.post!('Hello')
       end.should raise_error('Error Message')

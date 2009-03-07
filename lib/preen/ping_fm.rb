@@ -17,8 +17,9 @@ module Preen
     def post!(text)
       @log.info "Posting #{text} to Ping.fm"
       returning(@client.post(text)) do |result|
-        if result[:status] == 'FAIL'
-          raise result[:message]
+        require 'ruby-debug'
+        if result["status"] == 'FAIL'
+          raise result["message"]
         end
       end
     end
