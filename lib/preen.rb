@@ -6,7 +6,7 @@ module Preen
     ::File::SEPARATOR
   PATH           = ::File.dirname(LIBPATH) + ::File::SEPARATOR
 
-  PINGFM_API_KEY = "c2ad3f2b4a000fa689a5488848c268a9"
+  PINGFM_API_KEY = "f80f9d60fe847b51488ab48c02884c12"
 
   # Returns the version string for the library.
   #
